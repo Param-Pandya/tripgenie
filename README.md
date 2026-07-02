@@ -1,128 +1,60 @@
-# TripGenie
+<div align="center">
 
-An AI-powered travel itinerary generator. Pick a destination, trip style, and food preference and get a fully structured day-by-day plan, curated stays across four price tiers, seasonal destination suggestions, and a conversational travel assistant — all powered by your choice of LLM provider.
+<h1>✈️ TripGenie</h1>
 
-Ships as a **FastAPI backend** + **React Native (Expo) mobile frontend**.
+<h3>AI-Powered Travel Planner built with React Native, Expo 53 & FastAPI</h3>
 
----
+<p>
+Plan personalized trips in seconds using AI.
+Generate complete itineraries, discover curated stays, explore seasonal destinations,
+and chat with your own travel assistant — all from a beautiful cross-platform mobile application.
+</p>
 
-## Tech stack
+<p>
 
-| Layer | Tech |
-|-------|------|
-| Backend | Python 3.12+, FastAPI, uv |
-| LLM providers | OpenAI (`gpt-4.1-mini`), Google Gemini (`gemini-2.0-flash`) |
-| Mobile | React Native 0.79, Expo 53, TypeScript |
+<img src="https://img.shields.io/badge/React%20Native-0.79-61DAFB?style=for-the-badge&logo=react"/>
 
----
+<img src="https://img.shields.io/badge/Expo-SDK%2053-000020?style=for-the-badge&logo=expo"/>
 
-## Project structure
+<img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi"/>
 
-```
-.
-├── api/            # FastAPI app and route definitions
-├── cli/            # Interactive CLI prompts
-├── providers/      # LLM provider clients (OpenAI, Gemini)
-├── services/       # Core itinerary and assistant logic
-├── utils/          # Terrain classifier, spinner loader
-├── mobile-app/
-│   └── src/        # React Native screens and components
-├── config.py       # App-wide constants and defaults
-└── main.py         # CLI entry point
-```
+<img src="https://img.shields.io/badge/OpenAI-GPT--4.1--mini-412991?style=for-the-badge&logo=openai"/>
+
+<img src="https://img.shields.io/badge/Gemini-2.0%20Flash-4285F4?style=for-the-badge&logo=google"/>
+
+<img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript"/>
+
+</p>
+
+</div>
 
 ---
 
-## Prerequisites
+<h2>📱 Preview</h2>
 
-- Python 3.12+
-- [uv](https://github.com/astral-sh/uv) — Python package manager
-- Node.js 18+ and npm
-- [Expo Go](https://expo.dev/client) app on your phone (optional, for physical device testing)
+<p align="center">
 
----
+<img src="assets/screenshots/home.png" width="260"/>
 
-## Backend
+<img src="assets/screenshots/form.png" width="260"/>
 
-### Setup
+<img src="assets/screenshots/assistant.png" width="260"/>
 
-```bash
-uv sync
-```
-
-Create a `.env` file in the project root:
-
-```env
-OPENAI_API_KEY=your_openai_key
-GEMINI_API_KEY=your_gemini_key
-```
-
-### Run the API
-
-```bash
-uv run uvicorn api.app:app --reload
-```
-
-API docs available at `http://127.0.0.1:8000/docs`.
-
-### Endpoints
-
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/health` | Health check |
-| `GET` | `/api/options` | Available providers, trip types, food prefs |
-| `GET` | `/api/suggestions/seasonal` | Destination suggestions for the next 4 months |
-| `POST` | `/api/itineraries` | Generate a full itinerary |
-| `POST` | `/api/travel-assistant` | Ask a follow-up travel question |
-
-### Example itinerary request
-
-```json
-{
-  "provider": "openai",
-  "city": "Kyoto",
-  "days": 4,
-  "travelMonth": "October",
-  "tripType": "romantic",
-  "foodPreference": "veg",
-  "userCurrency": "INR"
-}
-```
-
-### CLI usage
-
-```bash
-uv run python main.py
-# or with flags
-uv run python main.py --provider openai --city Goa --days 3 --trip-type solo --food-pref veg
-```
+</p>
 
 ---
 
-## Mobile app
+<h2>✨ Overview</h2>
 
-### Setup
+<p>
 
-```bash
-cd mobile-app
-npm install
-```
+<b>TripGenie</b> is an AI-powered travel planning application that creates
+personalized itineraries based on your destination, trip duration,
+travel style, preferred travel month, and food preferences.
 
-### Run
+Powered by OpenAI GPT-4.1 Mini and Google Gemini 2.0 Flash,
+TripGenie generates structured day-by-day travel plans,
+recommends accommodations across multiple budgets,
+and includes an intelligent travel assistant to answer follow-up questions before and during your journey.
 
-```bash
-npm run start
-```
-
-Scan the QR code with Expo Go, or press `i` / `a` to launch in a simulator.
-
-> By default the app targets `http://127.0.0.1:8000`. When running on a physical device, update the API base URL in `mobile-app/src/api.ts`.
-
----
-
-## Providers
-
-| Key | Model |
-|-----|-------|
-| `openai` | `gpt-4.1-mini` |
-| `gemini` | `gemini-2.0-flash` |
+</p>
