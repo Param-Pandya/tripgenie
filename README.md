@@ -48,13 +48,10 @@ and chat with your own travel assistant — all from a beautiful cross-platform 
 
 <p>
 
-<b>TripGenie</b> is an AI-powered travel planning application that creates
-personalized itineraries based on your destination, trip duration,
-travel style, preferred travel month, and food preferences.
+<b>TripGenie</b> is a full-stack AI-powered travel planning application designed to simplify trip planning from start to finish. Users can generate detailed day-by-day itineraries, explore accommodation recommendations across multiple budget ranges, discover the best destinations based on the season, and ask follow-up travel questions through an intelligent AI assistant.
 
-Powered by OpenAI GPT-4.1 Mini and Google Gemini 2.0 Flash,
-TripGenie generates structured day-by-day travel plans,
-recommends accommodations across multiple budgets,
-and includes an intelligent travel assistant to answer follow-up questions before and during your journey.
+The application combines a React Native (Expo SDK 53) mobile frontend with a FastAPI backend and supports multiple Large Language Models, including OpenAI GPT-4.1 Mini and Google Gemini 2.0 Flash, to generate personalized, context-aware travel experiences in seconds.
+
+Whether you're planning a solo adventure, family vacation, romantic getaway, or business trip, TripGenie helps you make better travel decisions with AI-driven recommendations and an intuitive mobile experience.
 
 </p>
