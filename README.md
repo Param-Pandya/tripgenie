@@ -34,11 +34,11 @@ and chat with your own travel assistant — all from a beautiful cross-platform 
 
 <p align="center">
 
-<img src="assets/screenshots/home.jpeg" width="260"/>
+<img src="screenshots/home.jpeg" width="260"/>
 
-<img src="assets/screenshots/form.png" width="260"/>
+<img src="screenshots/form.png" width="260"/>
 
-<img src="assets/screenshots/assistant.jpeg" width="260"/>
+<img src="screenshots/assistant.jpeg" width="260"/>
 
 </p>
 
